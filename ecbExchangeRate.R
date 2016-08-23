@@ -3,7 +3,10 @@ library(xml2)
 library(dplyr)
 library(xlsx)
 
-url <- "https://sdw.ecb.europa.eu/export.do?node=2018794&CURRENCY=&start=01-01-2016&end=&FREQ=D&DATASET=0&exportType=sdmx"
+# url has changed, old url is not work
+# url <- "https://sdw.ecb.europa.eu/export.do?node=2018794&CURRENCY=&start=01-01-2016&end=&FREQ=D&DATASET=0&exportType=sdmx"
+url <- "https://sdw.ecb.europa.eu/export.do?dc=&removeItem=&rc=&ec=&legendPub=published&node=9691297&oc=&df=true&CURRENCY=&FREQ=D&pb=&legendNor=&DATASET=0&exportType=sdmx"
+
 download.file(url = url, destfile = "F:\\Mobile - Rabbids\\data tracking\\ecbExchangeRate\\exchangeRate.xml")
 
 doc1 <- read_xml("F:\\Mobile - Rabbids\\data tracking\\ecbExchangeRate\\exchangeRate.xml")
