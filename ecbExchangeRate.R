@@ -80,7 +80,7 @@ exr_next2Wk <- if (exr_latest$weekNumber != 53) {
     exr_next$weekNumber <- 1:2
     }
      
-exr_weekly <- rbind(exr_week, exr_next2Wk)
+exr_weekly <- rbind.data.frame(exr_week, exr_next2Wk)
 
 exr_weekly$currency <- rep(x = currency_code[i], nrow(exr_weekly))
 exchangeRate_weekly <- rbind.data.frame(exchangeRate_weekly, exr_weekly)
