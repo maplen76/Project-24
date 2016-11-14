@@ -1,3 +1,5 @@
+# to covert table as long format and split the event date scope day by day
+
 library(dplyr)
 library(xlsx)
 library(reshape2)
