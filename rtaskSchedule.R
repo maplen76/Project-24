@@ -6,7 +6,8 @@ taskscheduler_create(taskname = "extractEcbExchangeRate",
                      rscript = "D:/Rtest/ecbExchangeRateAll.R", 
                      schedule = "WEEKLY", 
                      starttime = "13:00",
-                     days = "MON"
+                     days = "MON",
+                     startdate = format(Sys.Date(), "%m/%d/%Y")  # note: have to keep the same date format as operating system
                      )
 
 ## run script weekly on Mon. Wed. Fri
@@ -14,14 +15,16 @@ taskscheduler_create(taskname = "extractPublishSummary_MON",
                      rscript = "D:/Rtest/extractPublisherSummary.R", 
                      schedule = "WEEKLY", 
                      starttime = "12:00",
-                     days = "MON"
+                     days = "MON",
+                     startdate = format(Sys.Date(), "%m/%d/%Y")  # note: have to keep the same date format as operating system
                      )
 
 taskscheduler_create(taskname = "extractPublishSummary_WED", 
                      rscript = "D:/Rtest/extractPublisherSummary.R", 
                      schedule = "WEEKLY", 
                      starttime = "12:00",
-                     days = "WED"
+                     days = "WED",
+                     startdate = format(Sys.Date(), "%m/%d/%Y")  # note: have to keep the same date format as operating system
                      )
 
 
@@ -29,7 +32,8 @@ taskscheduler_create(taskname = "extractPublishSummary_FRI",
                      rscript = "D:/Rtest/extractPublisherSummary.R", 
                      schedule = "WEEKLY", 
                      starttime = "12:00",
-                     days = "FRI"
+                     days = "FRI",
+                     startdate = format(Sys.Date(), "%m/%d/%Y")  # note: have to keep the same date format as operating system
 )
 
 ## delete the tasks
