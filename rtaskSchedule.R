@@ -7,7 +7,8 @@ taskscheduler_create(taskname = "extractEcbExchangeRate",
                      schedule = "WEEKLY", 
                      starttime = "13:00",
                      days = "MON",
-                     startdate = format(Sys.Date(), "%m/%d/%Y")  # note: have to keep the same date format as operating system
+                     startdate = format(Sys.Date(), "%m/%d/%Y"),  # note: have to keep the same date format as operating system
+                     Rexe = "d:\\PROGRA~1\\R\\R-34~1.1\\bin\\i386\\Rscript.exe" # note: set the path to 32 bit version because the default environment has been set to 32 bit
                      )
 
 ## run script weekly on Mon. Wed. Fri
@@ -17,6 +18,7 @@ taskscheduler_create(taskname = "extractPublishSummary_MON",
                      starttime = "12:00",
                      days = "MON",
                      startdate = format(Sys.Date(), "%m/%d/%Y")  # note: have to keep the same date format as operating system
+                     Rexe = "d:\\PROGRA~1\\R\\R-34~1.1\\bin\\i386\\Rscript.exe" # note: set the path to 32 bit version because the default environment has been set to 32 bit
                      )
 
 taskscheduler_create(taskname = "extractPublishSummary_WED", 
