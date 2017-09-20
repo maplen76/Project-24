@@ -1,7 +1,7 @@
 $ExcelApp = new-object -ComObject Excel.Application
 $ExcelApp.Visible = $true
 $ExcelApp.DisplayAlerts = $true
-$Workbook = $ExcelApp.Workbooks.Open("F:\\Mobile_Rabbids\\BI_Solution\\RCR_WeeklyCall_CL_data.xlsx", 3, $false, 5, $null, $null, $true)
+$Workbook = $ExcelApp.Workbooks.Open("x:\\xxxx.xlsx", 3, $false, 5, $null, $null, $true)
 Start-Sleep -Seconds 10
 
 $Workbook.RefreshAll()
